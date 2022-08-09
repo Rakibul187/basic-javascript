@@ -85,12 +85,26 @@ switch (name) {
 const friends = ['rahim', 'karim', 'sadek', 'aj', 'diudar', 'raishaaaa'];
 console.log(friends)
 
-let longest = friends[0]
-for (let i = 0; i < friends.length; i++) {
-    const element = friends[i];
-    // console.log(element)
-    if (element.length > longest.length) {
-        longest = element
+// let longest = friends[0]
+// for (let i = 0; i < friends.length; i++) {
+//     const element = friends[i];
+//     // console.log(element)
+//     if (element.length > longest.length) {
+//         longest = element
+//     }
+// }
+// console.log(longest)
+
+function getLongestElement(friends) {
+    let longest = friends[0];
+    for (let i = 0; i < friends.length; i++) {
+        let element = friends[i]
+        if (element.length > longest.length) {
+            longest = element
+        }
     }
+    return longest;
 }
-console.log(longest)
+const result = getLongestElement(friends);
+console.log(result)
+
