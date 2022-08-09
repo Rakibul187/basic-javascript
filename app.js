@@ -82,6 +82,8 @@ switch (name) {
 //     console.log(i)
 // }
 
+
+// largest string element chacking 
 const friends = ['rahim', 'karim', 'sadek', 'aj', 'diudar', 'raishaaaa'];
 console.log(friends)
 
@@ -107,4 +109,18 @@ function getLongestElement(friends) {
 }
 const result = getLongestElement(friends);
 console.log(result)
+
+const numbers = [1, 3, 5, 7, 9, 33, 22, 66, 88, 99, 44, 55, 77]
+
+function checkLargeNumber(numbers) {
+    let largeNumber = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        if (number > largeNumber) {
+            largeNumber = number
+        }
+    }
+    return largeNumber
+}
+console.log(checkLargeNumber(numbers))
 
